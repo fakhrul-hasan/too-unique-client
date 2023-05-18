@@ -44,6 +44,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <section className="py-8">
+        <img className="mx-auto" src="//yokaz.myshopify.com/cdn/shop/files/saperator.png" alt="" />
+        <h4 className="font-bold text-3xl text-center mt-2">Shop By Category</h4>
+      </section>
     </div>
   );
 };
