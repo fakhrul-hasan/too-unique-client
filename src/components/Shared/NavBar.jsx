@@ -1,6 +1,7 @@
 
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
+import ModalLoginForm from '../Pages/ModalLoginForm';
 
 const Navbar = () => {
     return (
@@ -45,7 +46,7 @@ const Navbar = () => {
           <h5 className="text-xl font-bold text-[#ff8c98]">Too Unique</h5>
         </div>
         <div className="navbar-end">
-        <button className="btn bg-[#ff8c98] border-transparent hover:bg-white hover:text-[#ff8c98] hover:border-[#ff8c98]">Login / Registration</button>
+        <ModalLoginForm></ModalLoginForm>
         </div>
       </div>
         <nav className='bg-[#54c2cf] relative mb-4'>
