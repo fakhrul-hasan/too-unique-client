@@ -2,8 +2,11 @@
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import ModalLoginForm from '../Pages/ModalLoginForm';
+import { AuthContext } from '../../Providers/AuthProvider';
+import { useContext } from 'react';
 
 const Navbar = () => {
+  const {user} = useContext(AuthContext);
     return (
       <>
       <div className="navbar bg-base-100">
@@ -53,8 +56,13 @@ const Navbar = () => {
           <div className='py-3 text-center'>
               <NavLink to='/' className='text-white font-bold text-lg me-5 hover:text-[#ff8c98]'>Home</NavLink>
               <NavLink to='/allToys' className='text-white font-bold text-lg me-5 hover:text-[#ff8c98]'>All Toys</NavLink>
-              <NavLink to='/myToys' className='text-white font-bold text-lg me-5 hover:text-[#ff8c98]'>My Toys</NavLink>
+              {
+                user &&
+                <span>
+                  <NavLink to='/myToys' className='text-white font-bold text-lg me-5 hover:text-[#ff8c98]'>My Toys</NavLink>
               <NavLink to='/addToy' className='text-white font-bold text-lg me-5 hover:text-[#ff8c98]'>Add A Toy</NavLink>
+                </span>
+              }
               <NavLink to='/blogs' className='text-white font-bold text-lg hover:text-[#ff8c98]'>Blogs</NavLink>
           </div>
           <div className='absolute bg-[url("//yokaz.myshopify.com/cdn/shop/files/1.png?v=1619006370")] h-6 w-full bg-repeat-x z-10 -bottom-4'></div>
