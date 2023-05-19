@@ -22,7 +22,7 @@ const AddToy = () => {
       sellerName: sellerName,
       sellerEmail: sellerEmail,
       subCategoryName: subCategoryName,
-      price: price,
+      price: parseInt(price),
       rating: rating,
       qty: qty,
       detail: detail,
@@ -102,7 +102,7 @@ const AddToy = () => {
             <div className="mb-2 block">
               <Label htmlFor="price" value="Price" />
             </div>
-            <TextInput name="price" type="text" required={true} />
+            <TextInput name="price" type="number" required={true} />
           </div>
         </div>
         <div className="flex justify-center w-full gap-2">

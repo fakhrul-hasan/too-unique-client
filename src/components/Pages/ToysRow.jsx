@@ -7,7 +7,7 @@ const ToysRow = ({ toy, sequenceNumber, handleDelete }) => {
   const location = useLocation();
   const { sellerName, name, subCategoryName, price, qty, _id } = toy;
   return (
-    <tr  data-aos='fade-right' data-aos-duration='1500'>
+    <tr  data-aos='fade-right'>
       {location.pathname == '/myToys' && <td>
         <button className="btn btn-circle btn-outline" onClick={()=>handleDelete(_id)}>
           <svg

@@ -55,7 +55,7 @@ const UpdateToy = () => {
       .then((data) => {
         console.log(data);
         if (data.modifiedCount > 0) {
-            toast.success("Updated Successfully!!");
+            toast("Updated Successfully!!");
             navigate('/myToys');
         }
       });
