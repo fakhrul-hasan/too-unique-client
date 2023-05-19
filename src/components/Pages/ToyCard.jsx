@@ -9,7 +9,7 @@ const ToyCard = ({toy}) => {
     const {user} = useContext(AuthContext);
     const {picture, name, price, rating, _id} = toy;
   return (
-    <div data-aos='flip-left' data-aos-duration='1500' className="card w-96 bg-base-100 shadow-xl">
+    <div data-aos='flip-left' data-aos-duration='1500' className="card w-72 md:w-96 bg-base-100 shadow-xl">
         
       <figure>
         <img

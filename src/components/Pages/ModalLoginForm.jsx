@@ -100,7 +100,7 @@ const ModalLoginForm = () => {
       </div>
       ) : (
         <button
-          className="bg-[#ff8c98] hover:bg-white text-white hover:text-[#ff8c98] border-2 border-[#ff8c98] hover:border-[#ff8c98] font-bold py-2 px-4 rounded"
+          className="bg-[#ff8c98] hover:bg-white text-white hover:text-[#ff8c98] md:border-2 border-[#ff8c98] hover:border-[#ff8c98] font-bold md:py-2 md:px-4 rounded"
           onClick={toggleModal}
         >
           Login / Registration

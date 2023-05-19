@@ -9,8 +9,8 @@ const Navbar = () => {
   const {user} = useContext(AuthContext);
     return (
       <>
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
+      <div className="navbar md:flex md:justify-between bg-base-100">
+        <div className="navbar-start block md:hidden">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
@@ -33,13 +33,19 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="text-[#ff8c98]">Homepage</a>
+                <Link to='/' className="text-[#ff8c98]">Home</Link>
               </li>
               <li>
-                <a className="text-[#ff8c98]">Portfolio</a>
+                <Link to='/allToys' className="text-[#ff8c98]">All Toys</Link>
+              </li>
+              {user && <span><li>
+                <Link to='/myToys' className="text-[#ff8c98]">My Toys</Link>
               </li>
               <li>
-                <a className="text-[#ff8c98]">About</a>
+                <Link to='/addToy' className="text-[#ff8c98]">Add A Toy</Link>
+              </li></span>}
+              <li>
+                <Link to='/blogs' className="text-[#ff8c98]">Blogs</Link>
               </li>
             </ul>
           </div>
@@ -52,7 +58,7 @@ const Navbar = () => {
         <ModalLoginForm></ModalLoginForm>
         </div>
       </div>
-        <nav className='bg-[#54c2cf] relative mb-4'>
+        <nav className='bg-[#54c2cf] relative mb-4 hidden md:block '>
           <div className='py-3 text-center'>
               <NavLink to='/' className='text-white font-bold text-lg me-5 hover:text-[#ff8c98]'>Home</NavLink>
               <NavLink to='/allToys' className='text-white font-bold text-lg me-5 hover:text-[#ff8c98]'>All Toys</NavLink>

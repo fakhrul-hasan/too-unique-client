@@ -23,21 +23,21 @@ const ReactTabs = () => {
         </TabList>
 
         <TabPanel>
-          <div className="grid grid-cols-3 justify-around gap-4 pt-8">
+          <div className="grid md:grid-cols-3 justify-around gap-4 md:pt-8">
             {toys.map((toy) => (
               <ToyCard key={toy._id} toy={toy}></ToyCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-        <div className="grid grid-cols-3 justify-around gap-4 pt-8">
+        <div className="grid md:grid-cols-3 justify-around gap-4 md:pt-8">
             {toys.map((toy) => (
               <ToyCard key={toy._id} toy={toy}></ToyCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-        <div className="grid grid-cols-3 justify-around gap-4 pt-8">
+        <div className="grid md:grid-cols-3 justify-around gap-4 md:pt-8">
             {toys.map((toy) => (
               <ToyCard key={toy._id} toy={toy}></ToyCard>
             ))}
