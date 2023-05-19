@@ -1,9 +1,11 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const ToyDetails = () => {
   const toy = useLoaderData();
   const [{picture, name, detail, sellerName, sellerEmail, subCategoryName, price, qty}] = toy;
+  useTitle(name);
   console.log(toy);
   return (
     <div data-aos='zoom-out-left' className="hero min-h-screen bg-base-200">

@@ -2,8 +2,10 @@ import { Label, TextInput, Textarea } from "flowbite-react";
 import React from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import useTitle from "../../hooks/useTitle";
 
 const UpdateToy = () => {
+  useTitle('Update Toy Details');
   const toyDetails = useLoaderData();
   const navigate = useNavigate();
   const [
@@ -119,11 +121,8 @@ const UpdateToy = () => {
         <div className="flex justify-center w-full gap-2">
           <select
             className="select select-bordered w-1/2 mt-7"
-            name="subCategoryName"
+            name="subCategoryName" defaultValue={subCategoryName}
           >
-            <option disabled defaultValue={subCategoryName}>
-              Sub-category
-            </option>
             <option>Electronics</option>
             <option>Remote Control Vehicle</option>
             <option>Monster Trucks</option>

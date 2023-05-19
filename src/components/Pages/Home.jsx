@@ -5,8 +5,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import useTitle from "../../hooks/useTitle";
 
 const Home = () => {
+  useTitle('Too Unique');
   useEffect(()=>{
     AOS.init();
   },[])

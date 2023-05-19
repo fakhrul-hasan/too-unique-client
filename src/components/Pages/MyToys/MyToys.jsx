@@ -2,8 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import ToysRow from "../ToysRow";
 import { ToastContainer, toast } from "react-toastify";
+import useTitle from "../../../hooks/useTitle";
 
 const MyToys = () => {
+  useTitle('My Toys');
   const { user } = useContext(AuthContext);
   const [addedToy, setAddedToy] = useState([]);
   const [sortOrder, setSortOrder] = useState('asc');

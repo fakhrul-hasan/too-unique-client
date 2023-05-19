@@ -2,7 +2,9 @@ import { Label, TextInput, Textarea } from "flowbite-react";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import useTitle from "../../hooks/useTitle";
 const AddToy = () => {
+  useTitle('Add Toy');
   const { user } = useContext(AuthContext);
   const handleAddToy = (event) => {
     event.preventDefault();
