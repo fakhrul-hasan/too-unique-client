@@ -1,5 +1,5 @@
 
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css';
 import ModalLoginForm from '../Pages/ModalLoginForm';
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -44,10 +44,10 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className="navbar-center flex flex-col border rounded-lg border-[#ff8c98] px-2">
+        <Link to='/' className="navbar-center flex flex-col border rounded-lg border-[#ff8c98] px-2" >
           <img src="https://png.pngtree.com/png-clipart/20230131/ourmid/pngtree-pink-car-with-love-nuances-on-valentines-day-png-image_6578252.png" className="h-12" alt="" />
           <h5 className="text-xl font-bold text-[#ff8c98]">Too Unique</h5>
-        </div>
+        </Link>
         <div className="navbar-end">
         <ModalLoginForm></ModalLoginForm>
         </div>

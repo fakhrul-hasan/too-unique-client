@@ -7,7 +7,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const ToyCard = ({toy}) => {
     const {user} = useContext(AuthContext);
-    const {picture, name, price, rating} = toy;
+    const {picture, name, price, rating, _id} = toy;
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
         
@@ -30,7 +30,7 @@ const ToyCard = ({toy}) => {
             {rating}
           </div>
           <div className="tooltip" data-tip={user ? 'Click to see details' : 'You have to log in first to view details'}>
-          <Link to='/toyDetails' className={user ? `btn bg-[#ff8c98]` : 'btn-disabled'}>View Details</Link>
+          <Link to={`/toyDetails/${_id}`} className={user ? `btn bg-[#ff8c98]` : 'btn-disabled'}>View Details</Link>
           </div>
         </div>
       </div>
