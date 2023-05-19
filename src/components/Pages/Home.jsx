@@ -2,12 +2,18 @@ import { Link } from "react-router-dom";
 import ReactTabs from "./ReactTabs";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(()=>{
+    AOS.init();
+  },[])
   return (
     <div>
       <ToastContainer />
-      <div className="carousel w-full">
+      <div data-aos='zoom-in' className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <img
             src="https://cdn.create.vista.com/api/media/medium/423537896/stock-photo-toy-car-gift-box-pink?token="

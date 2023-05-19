@@ -107,7 +107,7 @@ const ModalLoginForm = () => {
         </button>
       )}
       {showModal && (
-        <div className="fixed z-20 inset-0 overflow-y-auto">
+        <div data-aos='zoom-in-up' className="fixed z-20 inset-0 overflow-y-auto">
           <div className="flex items-center justify-center min-h-screen px-4">
             <div className="bg-white rounded-lg shadow-xl w-full max-w-md">
               {/* Close Button */}

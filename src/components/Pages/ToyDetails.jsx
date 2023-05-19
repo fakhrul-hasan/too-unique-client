@@ -6,7 +6,7 @@ const ToyDetails = () => {
   const [{picture, name, detail, sellerName, sellerEmail, subCategoryName, price, qty}] = toy;
   console.log(toy);
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div data-aos='zoom-out-left' className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
         <img
           src={picture}
