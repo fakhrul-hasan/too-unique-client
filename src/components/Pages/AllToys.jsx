@@ -6,7 +6,6 @@ const AllToys = () => {
   const [toys, setToys] = useState([]);
   const { totalToys } = useLoaderData();
   const [currentPage, setCurrentPage] = useState(0);
-  console.log(totalToys);
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(`http://localhost:3000/allToys?page=${currentPage}&limit=${itemsPerPage}`);
