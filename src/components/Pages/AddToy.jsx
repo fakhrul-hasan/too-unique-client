@@ -1,6 +1,7 @@
 import { Label, TextInput, Textarea } from "flowbite-react";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 const AddToy = () => {
   const { user } = useContext(AuthContext);
   const handleAddToy = (event) => {
@@ -38,12 +39,14 @@ const AddToy = () => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
+          toast.success('Toy Added Successfully!!!');
           form.reset();
         }
       });
   };
   return (
     <div className="px-10 mb-8">
+      <ToastContainer/>
       <h3 className="text-center py-6 font-bold text-2xl">Add a Toy</h3>
       <form
         onSubmit={handleAddToy}
@@ -87,9 +90,9 @@ const AddToy = () => {
           </div>
         </div>
         <div className="flex justify-center w-full gap-2">
-          <select className="select select-bordered w-1/2 mt-7" name="subCategoryName">
-            <option disabled selected>
-              Sub-category
+          <select className="select select-bordered w-1/2 mt-7" name="subCategoryName" defaultValue={'Select a Sub-category'}>
+            <option disabled>
+              Select a Sub-category
             </option>
             <option>Electronics</option>
             <option>Remote Control Vehicle</option>
