@@ -4,11 +4,33 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useTitle from "../../hooks/useTitle";
+import { FaAngleUp } from "react-icons/fa";
 
 const Home = () => {
   useTitle('Too Unique');
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true)
+    } else {
+      setIsVisible(false)
+    }
+  }
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility)
+
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility)
+    }
+  }, [])
   useEffect(()=>{
     AOS.init();
   },[])
@@ -55,11 +77,28 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* Tab section */}
       <section className="py-8 flex flex-col">
         <img className="mx-auto" src="//yokaz.myshopify.com/cdn/shop/files/saperator.png" alt="" />
         <h4 className="font-bold text-3xl mx-auto mt-2 border-b-2 inline-block pb-4">Shop By Category</h4>
         <ReactTabs></ReactTabs>
       </section>
+      {/* Banner section */}
+      <section className="flex gap-8">
+        <img data-aos='fade-up-right' data-aos-duration='1500' className="w-1/2 rounded-lg" src="/public/banner1.jpg" alt="" />
+        <img data-aos='fade-up-left' data-aos-duration='1500' className="w-1/2 rounded-lg" src="/public/banner2.jpg" alt="" />
+      </section>
+      <div className="fixed bottom-4 right-4">
+      <button
+        type="button"
+        onClick={scrollToTop}
+        className={
+          isVisible ? 'opacity-100 bg-pink-600 hover:bg-pink-700 focus:ring-pink-500 inline-flex items-center rounded-full p-3 text-white shadow-sm transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2' : 'opacity-0'
+        }
+      >
+        <FaAngleUp/>
+      </button>
+    </div>
     </div>
   );
 };
