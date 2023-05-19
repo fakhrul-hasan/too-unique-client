@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import ReactTabs from "./ReactTabs";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
   return (
     <div>
+      <ToastContainer />
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <img
