@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import ReactTabs from "./ReactTabs";
 
 const Home = () => {
   return (
@@ -44,9 +44,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section className="py-8">
+      <section className="py-8 flex flex-col">
         <img className="mx-auto" src="//yokaz.myshopify.com/cdn/shop/files/saperator.png" alt="" />
-        <h4 className="font-bold text-3xl text-center mt-2">Shop By Category</h4>
+        <h4 className="font-bold text-3xl mx-auto mt-2 border-b-2 inline-block pb-4">Shop By Category</h4>
+        <ReactTabs></ReactTabs>
       </section>
     </div>
   );
