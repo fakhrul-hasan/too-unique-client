@@ -1,10 +1,25 @@
+import { FaEnvelope } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-[url('https://yokaz.myshopify.com/cdn/shop/files/footerbg.png?v=1619691995')] text-primary-content bg-center bg-no-repeat bg-cover">
       <div>
-         <div className="navbar-center flex flex-col border rounded-lg border-[#ff8c98] px-2 mt-16">
-           <img src="https://png.pngtree.com/png-clipart/20230131/ourmid/pngtree-pink-car-with-love-nuances-on-valentines-day-png-image_6578252.png" className="h-12" alt="" />
-           <h5 className="text-xl font-bold text-[#ff8c98]">Too Unique</h5>
+        <div className="navbar-center flex flex-col border rounded-lg border-[#ff8c98] px-2 mt-20">
+          <img
+            src="https://png.pngtree.com/png-clipart/20230131/ourmid/pngtree-pink-car-with-love-nuances-on-valentines-day-png-image_6578252.png"
+            className="h-12"
+            alt=""
+          />
+          <h5 className="text-xl font-bold text-[#ff8c98]">Too Unique</h5>
+        </div>
+        <div className="form-control">
+          <label className="input-group">
+            <input
+              type="text"
+              placeholder="Email address"
+              className="input input-bordered"
+            />
+            <button className="btn bg-[#ff8c98] border-transparent"><FaEnvelope/></button>
+          </label>
         </div>
         <p className="font-bold text-black">
           Providing reliable toys since 1992

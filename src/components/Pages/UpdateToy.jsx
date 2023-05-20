@@ -1,5 +1,4 @@
 import { Label, TextInput, Textarea } from "flowbite-react";
-import React from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import useTitle from "../../hooks/useTitle";
@@ -45,8 +44,7 @@ const UpdateToy = () => {
       qty: qty,
       detail: detail,
     };
-    console.log(toy);
-    fetch(`http://localhost:3000/updateToy/${_id}`, {
+    fetch(`https://too-unique-server.vercel.app/updateToy/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

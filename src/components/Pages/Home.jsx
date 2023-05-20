@@ -86,12 +86,12 @@ const Home = () => {
         <ReactTabs></ReactTabs>
       </section>
       {/* Banner section */}
-      <section className="flex gap-8 mb-4">
-        <img data-aos='fade-up-right' data-aos-duration='1500' className="w-1/2 rounded-lg" src="/banner1.jpg" alt="" />
-        <img data-aos='fade-up-left' data-aos-duration='1500' className="w-1/2 rounded-lg" src="/banner2.jpg" alt="" />
+      <section className="md:flex gap-8 mb-4">
+        <img data-aos='fade-up-right' data-aos-duration='1500' className="md:w-1/2 rounded-lg" src="/banner1.jpg" alt="" />
+        <img data-aos='fade-up-left' data-aos-duration='1500' className="md:w-1/2 rounded-lg" src="/banner2.jpg" alt="" />
       </section>
       {/* Thumbnail part */}
-      <div className="flex justify-around py-8">
+      <div className="grid grid-cols-2 gap-2 md:flex justify-around py-8">
         <img data-aos='zoom-in' data-aos-duration='1500' src="/thumbnail1.png" alt="" />
         <img data-aos='zoom-in' data-aos-duration='1500' src="/thumbnail2.png" alt="" />
         <img data-aos='zoom-in' data-aos-duration='1500' src="/thumbnail3.png" alt="" />

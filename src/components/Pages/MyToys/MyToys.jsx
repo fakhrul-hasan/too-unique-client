@@ -9,7 +9,7 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [addedToy, setAddedToy] = useState([]);
   const [sortOrder, setSortOrder] = useState('asc');
-  const url = `http://localhost:3000/allToys?email=${user?.email}&sortOrder=${sortOrder}`;
+  const url = `https://too-unique-server.vercel.app/allToys?email=${user?.email}&sortOrder=${sortOrder}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -18,7 +18,7 @@ const MyToys = () => {
       });
   }, [url]);
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/toy/${id}`, { method: "DELETE" })
+    fetch(`https://too-unique-server.vercel.app/toy/${id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

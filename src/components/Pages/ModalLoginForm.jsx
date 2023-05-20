@@ -90,7 +90,7 @@ const ModalLoginForm = () => {
       {user ? (
         <div className="dropdown dropdown-end">
         <label tabIndex={0}>
-          <img className="h-16" src='/userPhoto.png' alt="" />
+          <img className="h-16 rounded-full" src={user.photoURL || '/userPhoto.png'} alt="" />
         </label>
         <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 me-8">
           <li><a>{user.email}</a></li>

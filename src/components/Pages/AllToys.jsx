@@ -10,7 +10,7 @@ const AllToys = () => {
   const [currentPage, setCurrentPage] = useState(0);
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`http://localhost:3000/allToys?page=${currentPage}&limit=${itemsPerPage}`);
+      const response = await fetch(`https://too-unique-server.vercel.app/allToys?page=${currentPage}&limit=${itemsPerPage}`);
       const data = await response.json();
       setToys(data);
     }

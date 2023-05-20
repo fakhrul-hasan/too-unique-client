@@ -30,7 +30,7 @@ const AddToy = () => {
       detail: detail,
     };
     console.log(toy);
-    fetch("http://localhost:3000/addToy", {
+    fetch("https://too-unique-server.vercel.app/addToy", {
       method: "POST",
       headers: {
         "content-type": "application/json",

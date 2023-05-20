@@ -7,7 +7,7 @@ const ReactTabs = () => {
   const [toys, setToys] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
   useEffect(() => {
-    fetch(`http://localhost:3000/toys/${tabIndex}`)
+    fetch(`https://too-unique-server.vercel.app/toys/${tabIndex}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);

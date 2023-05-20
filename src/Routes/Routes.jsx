@@ -31,12 +31,12 @@ const router = createBrowserRouter([
         {
           path: 'allToys',
           element: <AllToys></AllToys>,
-          loader: ()=>fetch('http://localhost:3000/totalToys')
+          loader: ()=>fetch('https://too-unique-server.vercel.app/totalToys')
         },
         {
           path: 'toyDetails/:id',
           element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-          loader: ({params})=>fetch(`http://localhost:3000/toyDetails/${params.id}`)
+          loader: ({params})=>fetch(`https://too-unique-server.vercel.app/toyDetails/${params.id}`)
         },
         {
           path: 'myToys',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
         {
           path: 'updateToy/:id',
           element: <UpdateToy></UpdateToy>,
-          loader: ({params})=>fetch(`http://localhost:3000/toyDetails/${params.id}`)
+          loader: ({params})=>fetch(`https://too-unique-server.vercel.app/toyDetails/${params.id}`)
 
         }
       ]
