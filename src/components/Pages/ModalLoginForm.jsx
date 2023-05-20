@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProvider";
-import userPhoto from '../../../public/userPhoto.png';
 
 const ModalLoginForm = () => {
   const { createUser, signIn, googleSignIn, user, logOut } = useContext(AuthContext);
@@ -91,7 +90,7 @@ const ModalLoginForm = () => {
       {user ? (
         <div className="dropdown dropdown-end">
         <label tabIndex={0}>
-          <img className="h-16" src={userPhoto} alt="" />
+          <img className="h-16" src='/userPhoto.png' alt="" />
         </label>
         <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 me-8">
           <li><a>{user.email}</a></li>

@@ -13,7 +13,7 @@ const ToyCard = ({toy}) => {
         
       <figure>
         <img
-        className="w-full"
+        className="w-full transform transition-all duration-500 hover:scale-125"
           src={picture}
           alt="Shoes"
         />

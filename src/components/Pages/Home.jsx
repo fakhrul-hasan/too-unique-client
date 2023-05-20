@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import useTitle from "../../hooks/useTitle";
 import { FaAngleUp } from "react-icons/fa";
 import MessageSection from "./MessageSection/MessageSection";
+import ServiceSection from "./ServiceSection/ServiceSection";
 
 const Home = () => {
   useTitle('Too Unique');
@@ -86,18 +87,20 @@ const Home = () => {
       </section>
       {/* Banner section */}
       <section className="flex gap-8 mb-4">
-        <img data-aos='fade-up-right' data-aos-duration='1500' className="w-1/2 rounded-lg" src="/public/banner1.jpg" alt="" />
-        <img data-aos='fade-up-left' data-aos-duration='1500' className="w-1/2 rounded-lg" src="/public/banner2.jpg" alt="" />
+        <img data-aos='fade-up-right' data-aos-duration='1500' className="w-1/2 rounded-lg" src="/banner1.jpg" alt="" />
+        <img data-aos='fade-up-left' data-aos-duration='1500' className="w-1/2 rounded-lg" src="/banner2.jpg" alt="" />
       </section>
       {/* Thumbnail part */}
       <div className="flex justify-around py-8">
-        <img data-aos='zoom-in' data-aos-duration='1500' src="/public/thumbnail1.png" alt="" />
-        <img data-aos='zoom-in' data-aos-duration='1500' src="/public/thumbnail2.png" alt="" />
-        <img data-aos='zoom-in' data-aos-duration='1500' src="/public/thumbnail3.png" alt="" />
-        <img data-aos='zoom-in' data-aos-duration='1500' src="/public/thumbnail4.png" alt="" />
+        <img data-aos='zoom-in' data-aos-duration='1500' src="/thumbnail1.png" alt="" />
+        <img data-aos='zoom-in' data-aos-duration='1500' src="/thumbnail2.png" alt="" />
+        <img data-aos='zoom-in' data-aos-duration='1500' src="/thumbnail3.png" alt="" />
+        <img data-aos='zoom-in' data-aos-duration='1500' src="/thumbnail4.png" alt="" />
       </div>
       {/* Message Section */}
         <MessageSection></MessageSection>
+        {/* service section */}
+        <ServiceSection></ServiceSection>
       <div className="fixed bottom-4 right-4">
       <button
         type="button"

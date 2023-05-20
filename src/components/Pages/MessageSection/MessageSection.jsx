@@ -25,7 +25,7 @@ const MessageSection = () => {
           <SwiperSlide>
             <div className="">
               <h3 className="font-bold text-3xl">What People Say</h3>
-              <img className="mx-auto rounded-full my-8" src="/public/babyImg.png" alt="" />
+              <img className="mx-auto rounded-full my-8" src="/babyImg.png" alt="" />
               <p className="px-80 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit deserunt ab perspiciatis officiis accusantium incidunt quibusdam hic voluptas omnis dignissimos id fugiat quae, quia quo nam placeat voluptates nobis magni?</p>
                 <h4 className="font-bold text-2xl">Likhon</h4>
                 <h5 className="text-xl text-pink-600 font-semibold">Co-Founder</h5>
@@ -34,7 +34,7 @@ const MessageSection = () => {
           <SwiperSlide>
             <div className="">
               <h3 className="font-bold text-3xl">What People Say</h3>
-              <img className="mx-auto rounded-full my-8" src="/public/babyImg.png" alt="" />
+              <img className="mx-auto rounded-full my-8" src="/babyImg.png" alt="" />
               <p className="px-80 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit deserunt ab perspiciatis officiis accusantium incidunt quibusdam hic voluptas omnis dignissimos id fugiat quae, quia quo nam placeat voluptates nobis magni?</p>
                 <h4 className="font-bold text-2xl">Likhon</h4>
                 <h5 className="text-xl text-pink-600 font-semibold">Co-Founder</h5>
@@ -43,7 +43,7 @@ const MessageSection = () => {
           <SwiperSlide>
             <div className="">
               <h3 className="font-bold text-3xl">What People Say</h3>
-              <img className="mx-auto rounded-full my-8" src="/public/babyImg.png" alt="" />
+              <img className="mx-auto rounded-full my-8" src="/babyImg.png" alt="" />
               <p className="px-80 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit deserunt ab perspiciatis officiis accusantium incidunt quibusdam hic voluptas omnis dignissimos id fugiat quae, quia quo nam placeat voluptates nobis magni?</p>
                 <h4 className="font-bold text-2xl">Likhon</h4>
                 <h5 className="text-xl text-pink-600 font-semibold">Co-Founder</h5>
