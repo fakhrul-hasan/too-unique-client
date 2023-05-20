@@ -37,7 +37,7 @@ const Home = () => {
     AOS.init();
   },[])
   return (
-    <div>
+    <div className="overflow-hidden">
       <ToastContainer />
       <div data-aos='zoom-in' className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">

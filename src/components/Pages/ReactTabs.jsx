@@ -16,7 +16,7 @@ const ReactTabs = () => {
   return (
     <div>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-        <TabList>
+        <TabList className='text-center mt-4'>
           <Tab>Electronics</Tab>
           <Tab>Remote Control Vehicle</Tab>
           <Tab>Monster Truck</Tab>
