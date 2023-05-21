@@ -7,6 +7,7 @@ import { useContext } from 'react';
 
 const Navbar = () => {
   const {user} = useContext(AuthContext);
+  
     return (
       <>
       <div className="navbar md:flex md:justify-between bg-base-100">
@@ -54,7 +55,7 @@ const Navbar = () => {
           <img src="https://png.pngtree.com/png-clipart/20230131/ourmid/pngtree-pink-car-with-love-nuances-on-valentines-day-png-image_6578252.png" className="h-12" alt="" />
           <h5 className="text-xl font-bold text-[#ff8c98]">Too Unique</h5>
         </Link>
-        <div className="navbar-end">
+        <div className="flex-end">
         <ModalLoginForm></ModalLoginForm>
         </div>
       </div>

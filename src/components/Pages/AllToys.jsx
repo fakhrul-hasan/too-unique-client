@@ -8,6 +8,16 @@ const AllToys = () => {
   const [toys, setToys] = useState([]);
   const { totalToys } = useLoaderData();
   const [currentPage, setCurrentPage] = useState(0);
+  const handleSearch=event=>{
+    event.preventDefault();
+    const form = event.target;
+    const search = form.search.value;
+    fetch(`https://too-unique-server.vercel.app/allToys/${search}`)
+    .then(res=>res.json())
+    .then(data=>{
+      setToys(data);
+    })
+  }
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(`https://too-unique-server.vercel.app/allToys?page=${currentPage}&limit=${itemsPerPage}`);
@@ -20,8 +30,11 @@ const AllToys = () => {
   const totalPages = Math.ceil(totalToys / itemsPerPage);
   const pageNumbers = [...Array(totalPages).keys()];
   return (
-    <div>
-      <div className="overflow-x-auto">
+    <div className="">
+      <form onSubmit={handleSearch} className="text-center absolute top-5 right-1/2">
+        <input type="text" placeholder="Search here" className="input border-[#ff8c98] input-[#ff8c98] w-full max-w-xs" name='search' />
+        </form>
+      <div className="overflow-hidden">
         <table className="table w-full">
           {/* head*/}
           <thead>
