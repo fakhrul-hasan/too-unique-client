@@ -1,5 +1,5 @@
 import { Card } from "flowbite-react";
-import React from "react";
+import './ServiceSection.css';
 
 const ServiceSection = () => {
   return (
@@ -13,16 +13,16 @@ const ServiceSection = () => {
         Our Services
       </h4>
       <div className="grid grid-cols-2 gap-2 md:flex justify-around mt-14 md:mt-16">
-        <div data-aos='fade-right' data-aos-duration='1500' className="max-w-sm">
+      <div data-aos='fade-right' data-aos-duration='1500' className="max-w-sm">
           <Card className="rounded-t-3xl md:px-14">
-            <div className="flex flex-col items-center pb-10 relative">
+            <div className="flex flex-col items-center pb-10 relative img-container">
               <img
-                className="mb-3 h-20 md:h-36 w-20 md:w-36 rounded-full bg-base-200 absolute bottom-20 md:bottom-24 animate-pulse"
+                className="mb-3 h-20 md:h-36 w-20 md:w-36 rounded-full bg-base-200 absolute bottom-20 md:bottom-24 animate-pulse img-flip"
                 src="/freeShipping.png"
                 alt="Bonnie image"
               />
               <h5 className="mb-1 md:text-xl font-medium text-gray-900 dark:text-white mt-12 md:mt-20">
-                Free World Shipping
+                Free World Shiipping
               </h5>
               <span className="text-sm text-gray-500 dark:text-gray-400">
                 Order Over $100
@@ -32,9 +32,9 @@ const ServiceSection = () => {
         </div>
         <div data-aos='fade-right' data-aos-duration='1500' className="max-w-sm">
           <Card className="rounded-t-3xl md:px-14">
-            <div className="flex flex-col items-center pb-10 relative">
+            <div className="flex flex-col items-center pb-10 relative img-container">
               <img
-                className="mb-3 h-20 md:h-36 w-20 md:w-36 rounded-full bg-base-200 absolute bottom-20 md:bottom-24 animate-pulse"
+                className="mb-3 h-20 md:h-36 w-20 md:w-36 rounded-full bg-base-200 absolute bottom-20 md:bottom-24 animate-pulse img-flip"
                 src="/moneyBack.png"
                 alt="Bonnie image"
               />
@@ -49,9 +49,9 @@ const ServiceSection = () => {
         </div>
         <div data-aos='fade-left' data-aos-duration='1500' className="max-w-sm">
           <Card className="rounded-t-3xl mt-10 md:mt-0 md:px-14">
-            <div className="flex flex-col items-center pb-10 relative">
+            <div className="flex flex-col items-center pb-10 relative img-container">
               <img
-                className="mb-3 h-20 md:h-36 w-20 md:w-36 rounded-full bg-base-200 absolute bottom-20 md:bottom-24 animate-pulse"
+                className="mb-3 h-20 md:h-36 w-20 md:w-36 rounded-full bg-base-200 absolute bottom-20 md:bottom-24 animate-pulse img-flip"
                 src="/freeGift.png"
                 alt="Bonnie image"
               />
@@ -66,9 +66,9 @@ const ServiceSection = () => {
         </div>
         <div data-aos='fade-left' data-aos-duration='1500' className="max-w-sm">
           <Card className="rounded-t-3xl mt-10 md:mt-0 md:px-14">
-            <div className="flex flex-col items-center pb-10 relative">
+            <div className="flex flex-col items-center pb-10 relative img-container">
               <img
-                className="mb-3 h-20 md:h-36 w-20 md:w-36 rounded-full bg-base-200 absolute bottom-20 md:bottom-24 animate-pulse"
+                className="mb-3 h-20 md:h-36 w-20 md:w-36 rounded-full bg-base-200 absolute bottom-20 md:bottom-24 animate-pulse img-flip"
                 src="/onlineSupport.png"
                 alt="Bonnie image"
               />

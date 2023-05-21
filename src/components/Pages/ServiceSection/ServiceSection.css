@@ -1,0 +1,8 @@
+.img-flip {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.6s;
+}
+.img-container:hover .img-flip{
+    transform: rotateY(360deg);
+}
